@@ -1,7 +1,7 @@
 {
     "name": "rollup-playground",
     "version": "1.0.0",
-    "main": "dist/bundle.js",
+    "main": "src/main.js",
     "license": "MIT",
     "devDependencies": {
         "babel": "^6.23.0",
