@@ -3,6 +3,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import postcssModules from 'postcss-modules';
+import autoprefixer from 'autoprefixer';
 
 const cssExportMap = {};
 
@@ -17,6 +18,7 @@ export default {
         // compile CSS Modules
         postcss({
             plugins: [
+                autoprefixer(),
                 postcssModules({
                     getJSON(id, exportTokens) {
                         cssExportMap[id] = exportTokens;

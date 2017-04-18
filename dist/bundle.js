@@ -3559,7 +3559,7 @@ var React_1 = React$1;
 
 var react = React_1;
 
-var styles = { "blue": "_blue_vwyu6_1" };
+var styles = { "blue": "_blue_1an8g_1" };
 
 var classCallCheck = function (instance, Constructor) {
   if (!(instance instanceof Constructor)) {
