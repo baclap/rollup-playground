@@ -1,6 +1,8 @@
+$color: blue;
+
 .blue {
     appearance: none;
     display: inline-block;
-    background: blue;
+    background: $color;
     color: white;
 }

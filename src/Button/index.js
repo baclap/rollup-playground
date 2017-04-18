@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './style.css';
+import styles from './style.scss';
 
 const Component = React.Component;
 const PropTypes = React.PropTypes;

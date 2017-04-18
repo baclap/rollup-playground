@@ -4,6 +4,12 @@ import babel from 'rollup-plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import postcssModules from 'postcss-modules';
 import autoprefixer from 'autoprefixer';
+import sass from 'node-sass';
+
+const preprocessor = (content, id) => new Promise((resolve, reject) => {
+    const result = sass.renderSync({ file: id });
+    resolve({ code: result.css.toString() });
+});
 
 const cssExportMap = {};
 
@@ -17,17 +23,19 @@ export default {
         commonjs({ sourceMap: false }),
         // compile CSS Modules
         postcss({
+            preprocessor,
             plugins: [
                 autoprefixer(),
                 postcssModules({
                     getJSON(id, exportTokens) {
                         cssExportMap[id] = exportTokens;
                     }
-                }),
+                })
             ],
             getExport(id) {
                 return cssExportMap[id];
             },
+            extensions: ['.scss'],
             extract: true
         }),
         // transform ES6 code

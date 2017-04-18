@@ -3559,7 +3559,7 @@ var React_1 = React$1;
 
 var react = React_1;
 
-var styles = { "blue": "_blue_1an8g_1" };
+var styles = { "blue": "_blue_e6ov2_1" };
 
 var classCallCheck = function (instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -3656,7 +3656,7 @@ Button.propTypes = {
     children: PropTypes.node.isRequired
 };
 
-var styles$1 = { "red": "_red_151rz_1" };
+var styles$1 = { "red": "_red_suhqf_1" };
 
 var Component$1 = react.Component;
 var PropTypes$1 = react.PropTypes;
