@@ -1,8 +1,10 @@
-._blue_e6ov2_1 {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  display: inline-block;
+._wrap_13bcb_1 {
+  border: 1px solid green; }
+
+._blue_13bcb_4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: blue;
   color: white; }
 

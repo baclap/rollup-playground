@@ -1,8 +1,11 @@
 $color: blue;
 
+.wrap {
+    border: 1px solid green;
+}
+
 .blue {
-    appearance: none;
-    display: inline-block;
+    display: flex;
     background: $color;
     color: white;
 }

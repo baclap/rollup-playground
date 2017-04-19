@@ -3559,7 +3559,7 @@ var React_1 = React$1;
 
 var react = React_1;
 
-var styles = { "blue": "_blue_e6ov2_1" };
+var styles = { "wrap": "_wrap_13bcb_1", "blue": "_blue_13bcb_4" };
 
 var classCallCheck = function (instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -3627,6 +3627,8 @@ var possibleConstructorReturn = function (self, call) {
   return call && (typeof call === "object" || typeof call === "function") ? call : self;
 };
 
+console.log(styles);
+
 var Component = react.Component;
 var PropTypes = react.PropTypes;
 
@@ -3642,9 +3644,13 @@ var Button = function (_Component) {
         key: 'render',
         value: function render() {
             return react.createElement(
-                'button',
-                { onClick: this.props.onClick, className: styles.blue },
-                this.props.children
+                'div',
+                { className: styles.wrap },
+                react.createElement(
+                    'button',
+                    { onClick: this.props.onClick, className: styles.blue },
+                    this.props.children
+                )
             );
         }
     }]);

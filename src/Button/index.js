@@ -1,13 +1,17 @@
 import React from 'react';
 import styles from './style.scss';
 
+console.log(styles)
+
 const Component = React.Component;
 const PropTypes = React.PropTypes;
 
 export default class Button extends Component {
     render() {
         return (
-            <button onClick={this.props.onClick} className={styles.blue}>{this.props.children}</button>
+            <div className={styles.wrap}>
+                <button onClick={this.props.onClick} className={styles.blue}>{this.props.children}</button>
+            </div>
         );
     }
 }
