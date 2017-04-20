@@ -16,6 +16,7 @@ const cssExportMap = {};
 export default {
     entry: 'src/main.js',
     format: 'cjs',
+    external: ['react'],
     plugins: [
         // enables us to resolve packages located in node_modules
         resolve(),
