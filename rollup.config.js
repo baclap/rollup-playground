@@ -26,7 +26,7 @@ export default {
         postcss({
             preprocessor,
             plugins: [
-                autoprefixer(),
+                autoprefixer({ browsers: 'last 2 versions' }),
                 postcssModules({
                     getJSON(id, exportTokens) {
                         cssExportMap[id] = exportTokens;
@@ -40,7 +40,14 @@ export default {
             extract: true
         }),
         // transform ES6 code
-        babel({ exclude: 'node_modules/**' })
+        babel({
+            exclude: 'node_modules/**',
+            presets: [
+                'react',
+                ['es2015', { modules: false }]
+            ],
+            plugins: ['external-helpers']
+        })
     ],
     dest: 'dist/bundle.js'
 };

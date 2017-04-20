@@ -1,7 +1,7 @@
 const { createConfig } = require('@webpack-blocks/webpack2');
 const babel = require('@webpack-blocks/babel6');
 
-function scssTransform() {
+function cssModules() {
     return () => {
         return ({
             module: {
@@ -29,10 +29,11 @@ function scssTransform() {
 
 module.exports = {
     components: 'src/**/*.js',
+    styleguideDir: 'styleguide',
     webpackConfig: createConfig([
         babel({
             presets: ["react", "es2015"]
         }),
-        scssTransform()
+        cssModules()
 	])
 };
